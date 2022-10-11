@@ -12,7 +12,7 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 
 
-move below chunk '(candidate.length > MAX_PARTITION_KEY_LENGTH)' in  if (candidate) block becaue of  if (candidate) condition is false it will never comes in below block si it should be in in  if (candidate) block.
+Move below chunk '(candidate.length > MAX_PARTITION_KEY_LENGTH)' in  if (candidate) block becaue of  if (candidate) condition is false it will never comes in below block si it should be in in  if (candidate) block.
 
   if (candidate.length > MAX_PARTITION_KEY_LENGTH) {
    candidate = crypto.createHash("sha3-512").update(candidate).digest("hex");

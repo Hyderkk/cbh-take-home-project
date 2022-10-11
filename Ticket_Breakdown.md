@@ -19,13 +19,13 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 As We have Agents table already, we all add a Column of AgentUserId, this AgentUserId will be unique key. It can be thrir National Identity Card Number (NID) or combination of characters with NID. Example in one of our project we created user ID by their Department Acronym plus 00 plus getting middle 7 digits of NID. Example, a user whose NID is 4007-1234567-1 and is belong to Department of Plant Protection so his user id will be DPP-00-1234567. In a unique case if middle 7 digits are same for 2 users the second user will get the user id DPP-01-1234567. This middle 00 series will also helps you if you want to create a child user of agent that perform some task on behalf of agent so it will be incremental and can be uniquely identifiable.
 
-Break Down 1
+#Break Down 1
 So whenever we create agent in our system we will create Agent User Id and store it in AgentUserId column of Agents table.
 
-Breakdown 2
+#Breakdown 2
 We can store AgentUserId as reference Id in Facilities table while storing Facilities so when generate Report we get the AgentUserId from query.
 
-Breakdown 3 
+#Breakdown 3 
 We can skip breakdown 2 and while generating report can create a join from our Facilities table to Agents table on AgentId and get AgenctUserId from there.
 
 
