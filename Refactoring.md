@@ -9,3 +9,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+
+
+move below chunk '(candidate.length > MAX_PARTITION_KEY_LENGTH)' in  if (candidate) block becaue of  if (candidate) condition is false it will never comes in below block si it should be in in  if (candidate) block.
+
+  if (candidate.length > MAX_PARTITION_KEY_LENGTH) {
+   candidate = crypto.createHash("sha3-512").update(candidate).digest("hex");
+}
